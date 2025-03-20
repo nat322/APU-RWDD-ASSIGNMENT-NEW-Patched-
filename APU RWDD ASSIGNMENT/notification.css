@@ -1,0 +1,86 @@
+/* Notification Bell */
+.notification {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#notification-dot {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#notification-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Show when active */
+#notification-dropdown.active {
+    display: block;
+}
+
+.dropdown-header {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#notification-list {
+    list-style: none;
+    padding: 0;
+}
+
+#notification-list li {
+    padding: 10px;
+    background: #374151;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#notification-list li:hover {
+    background: #4b5563;
+}
+
+/* Overlay */
+#friend-request-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#friend-request-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
